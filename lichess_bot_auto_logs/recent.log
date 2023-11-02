@@ -1,0 +1,358 @@
+2023-11-02 10:08:28,451 __main__ (lichess-bot.py:1023) INFO 
+    .   _/|
+    .  // o\
+    .  || ._)  lichess-bot 2023.10.26.1
+    .  //__\
+    .  )___(   Play on Lichess with a bot
+    
+2023-11-02 10:08:28,463 config (config.py:260) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./engines/
+  name: TermomanEngine
+  working_dir: ''
+  protocol: homemade
+  ponder: true
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  uci_options:
+    Move Overhead: 100
+    Threads: 4
+    Hash: 512
+    SyzygyPath: ./syzygy/
+    UCI_ShowWDL: true
+  silence_stderr: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 2000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 1800
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - bullet
+  - blitz
+  - rapid
+  - classical
+  modes:
+  - casual
+  - rated
+  bullet_requires_increment: false
+greeting:
+  hello: Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond
+    to.
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}. Type !help for a list of commands I can respond
+    to.
+  goodbye_spectators: Thanks for watching!
+matchmaking:
+  allow_matchmaking: false
+  challenge_variant: random
+  challenge_timeout: 30
+  challenge_initial_time:
+  - 60
+  - 180
+  challenge_increment:
+  - 1
+  - 2
+  opponent_rating_difference: 300
+  opponent_allow_tos_violation: false
+  challenge_mode: random
+  challenge_filter: none
+
+2023-11-02 10:08:28,463 config (config.py:261) DEBUG ====================
+2023-11-02 10:08:28,465 config (config.py:260) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./engines/
+  name: TermomanEngine
+  working_dir: /Users/vasileignat/Documents/Projects/Labs/fia-lab3
+  protocol: homemade
+  ponder: true
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+    max_depth: .inf
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  uci_options:
+    Move Overhead: 100
+    Threads: 4
+    Hash: 512
+    SyzygyPath: ./syzygy/
+    UCI_ShowWDL: true
+  silence_stderr: false
+  uci_ponder: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 2000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+  uci_ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 1800
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - bullet
+  - blitz
+  - rapid
+  - classical
+  modes:
+  - casual
+  - rated
+  bullet_requires_increment: false
+  block_list: []
+  allow_list: []
+greeting:
+  hello: Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond
+    to.
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}. Type !help for a list of commands I can respond
+    to.
+  goodbye_spectators: Thanks for watching!
+matchmaking:
+  allow_matchmaking: false
+  challenge_variant: random
+  challenge_timeout: 30
+  challenge_initial_time:
+  - 60
+  - 180
+  challenge_increment:
+  - 1
+  - 2
+  opponent_rating_difference: 300
+  opponent_allow_tos_violation: false
+  challenge_mode: random
+  challenge_filter: none
+  block_list: []
+  challenge_days:
+  - null
+  opponent_min_rating: 600
+  opponent_max_rating: 4000
+  overrides: {}
+pgn_file_grouping: game
+
+2023-11-02 10:08:28,465 config (config.py:261) DEBUG ====================
+2023-11-02 10:08:28,465 __main__ (lichess-bot.py:1026) INFO Checking engine configuration ...
+2023-11-02 10:08:28,469 engine_wrapper (engine_wrapper.py:67) DEBUG Starting engine: ['/Users/vasileignat/Documents/Projects/Labs/fia-lab3/engines/TermomanEngine']
+2023-11-02 10:08:28,470 __main__ (lichess-bot.py:1029) INFO Engine configuration OK
+2023-11-02 10:08:28,477 urllib3.connectionpool (connectionpool.py:1053) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2023-11-02 10:08:28,648 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "POST /api/token/test HTTP/1.1" 200 None
+2023-11-02 10:08:28,704 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "GET /api/account HTTP/1.1" 200 None
+2023-11-02 10:08:28,704 __main__ (lichess-bot.py:1038) INFO Welcome termoman!
+2023-11-02 10:08:28,705 __main__ (lichess-bot.py:209) INFO You're now connected to https://lichess.org/ and awaiting challenges.
+2023-11-02 10:08:28,959 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "GET /api/account/playing HTTP/1.1" 200 17
+2023-11-02 10:08:39,721 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'challenge', 'challenge': {'id': 'lGU39kXF', 'url': 'https://lichess.org/lGU39kXF', 'status': 'created', 'challenger': {'id': 'libercom', 'name': 'libercom', 'title': None, 'rating': 1500, 'provisional': True, 'online': True, 'lag': 4}, 'destUser': {'id': 'termoman', 'name': 'termoman', 'title': 'BOT', 'rating': 2000, 'provisional': True, 'online': True}, 'variant': {'key': 'standard', 'name': 'Standard', 'short': 'Std'}, 'rated': False, 'speed': 'blitz', 'timeControl': {'type': 'clock', 'limit': 300, 'increment': 3, 'show': '5+3'}, 'color': 'black', 'finalColor': 'black', 'perf': {'icon': '\ue01d', 'name': 'Blitz'}}, 'compat': {'bot': True, 'board': True}}
+2023-11-02 10:08:39,723 __main__ (lichess-bot.py:424) INFO Accept Blitz casual challenge from libercom (1500?) (lGU39kXF)
+2023-11-02 10:08:39,731 urllib3.connectionpool (connectionpool.py:293) DEBUG Resetting dropped connection: lichess.org
+2023-11-02 10:08:39,918 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "POST /api/challenge/lGU39kXF/accept HTTP/1.1" 200 11
+2023-11-02 10:08:39,921 __main__ (lichess-bot.py:257) INFO --- Process Queued. Count: 1. IDs: {'lGU39kXF'}
+2023-11-02 10:08:39,922 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'gameStart', 'game': {'fullId': 'lGU39kXFUrUW', 'gameId': 'lGU39kXF', 'fen': 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', 'color': 'white', 'lastMove': '', 'source': 'friend', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': False, 'hasMoved': False, 'opponent': {'id': 'libercom', 'username': 'libercom', 'rating': 1500}, 'isMyTurn': True, 'secondsLeft': 300, 'compat': {'bot': True, 'board': True}, 'id': 'lGU39kXF'}}
+2023-11-02 10:08:39,922 __main__ (lichess-bot.py:257) INFO --- Process Used. Count: 1. IDs: {'lGU39kXF'}
+2023-11-02 10:08:39,958 urllib3.connectionpool (connectionpool.py:1053) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2023-11-02 10:08:40,142 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "GET /api/bot/game/stream/lGU39kXF HTTP/1.1" 200 None
+2023-11-02 10:08:40,142 __mp_main__ (lichess-bot.py:575) DEBUG Initial state: {'id': 'lGU39kXF', 'variant': {'key': 'standard', 'name': 'Standard', 'short': 'Std'}, 'speed': 'blitz', 'perf': {'name': 'Blitz'}, 'rated': False, 'createdAt': 1698912519979, 'white': {'id': 'termoman', 'name': 'termoman', 'title': 'BOT', 'rating': 2000, 'provisional': True}, 'black': {'id': 'libercom', 'name': 'libercom', 'title': None, 'rating': 1500, 'provisional': True}, 'initialFen': 'startpos', 'clock': {'initial': 300000, 'increment': 3000}, 'type': 'gameFull', 'state': {'type': 'gameState', 'moves': '', 'wtime': 300000, 'btime': 300000, 'winc': 3000, 'binc': 3000, 'status': 'started'}}
+2023-11-02 10:08:40,146 engine_wrapper (engine_wrapper.py:67) DEBUG Starting engine: ['/Users/vasileignat/Documents/Projects/Labs/fia-lab3/engines/TermomanEngine']
+2023-11-02 10:08:40,147 __mp_main__ (lichess-bot.py:581) DEBUG The engine for game lGU39kXF has pid=?
+2023-11-02 10:08:40,147 __mp_main__ (lichess-bot.py:584) INFO +++ https://lichess.org/lGU39kXF/white Blitz vs libercom (1500?) (lGU39kXF)
+2023-11-02 10:08:40,147 conversation (conversation.py:83) INFO *** https://lichess.org/lGU39kXF/white [player] termoman: Hi! I'm termoman. Good luck! Type !help for a list of commands I can respond to.
+2023-11-02 10:08:40,151 urllib3.connectionpool (connectionpool.py:1053) DEBUG Starting new HTTPS connection (2): lichess.org:443
+2023-11-02 10:08:40,337 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "POST /api/bot/game/lGU39kXF/chat HTTP/1.1" 200 11
+2023-11-02 10:08:40,339 conversation (conversation.py:83) INFO *** https://lichess.org/lGU39kXF/white [spectator] termoman: Hi! I'm termoman. Type !help for a list of commands I can respond to.
+2023-11-02 10:08:40,394 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "POST /api/bot/game/lGU39kXF/chat HTTP/1.1" 200 11
+2023-11-02 10:08:40,395 __mp_main__ (lichess-bot.py:691) INFO 
+2023-11-02 10:08:40,395 __mp_main__ (lichess-bot.py:692) INFO move: 1
+2023-11-02 10:08:40,395 engine_wrapper (engine_wrapper.py:621) INFO Searching for time 10 seconds for game lGU39kXF
+2023-11-02 10:08:40,448 engine_wrapper (engine_wrapper.py:293) INFO Source: Engine
+2023-11-02 10:08:40,499 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "POST /api/bot/game/lGU39kXF/move/g1f3?offeringDraw=false HTTP/1.1" 200 11
+2023-11-02 10:08:40,500 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'chatLine', 'room': 'player', 'username': 'termoman', 'text': "Hi! I'm termoman. Good luck! Type !help for a list of commands I can respond to."}
+2023-11-02 10:08:40,500 conversation (conversation.py:42) INFO *** https://lichess.org/lGU39kXF/white [player] termoman: Hi! I'm termoman. Good luck! Type !help for a list of commands I can respond to.
+2023-11-02 10:08:40,500 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'chatLine', 'room': 'spectator', 'username': 'termoman', 'text': "Hi! I'm termoman. Type !help for a list of commands I can respond to."}
+2023-11-02 10:08:40,500 conversation (conversation.py:42) INFO *** https://lichess.org/lGU39kXF/white [spectator] termoman: Hi! I'm termoman. Type !help for a list of commands I can respond to.
+2023-11-02 10:08:40,501 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'g1f3', 'wtime': 300000, 'btime': 300000, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-11-02 10:08:41,625 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'g1f3 d7d5', 'wtime': 300000, 'btime': 300000, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-11-02 10:08:41,626 __mp_main__ (lichess-bot.py:691) INFO 
+2023-11-02 10:08:41,626 __mp_main__ (lichess-bot.py:692) INFO move: 2
+2023-11-02 10:08:41,626 engine_wrapper (engine_wrapper.py:643) INFO Searching for wtime 298000 btime 300000 for game lGU39kXF
+2023-11-02 10:08:41,718 engine_wrapper (engine_wrapper.py:293) INFO Source: Engine
+2023-11-02 10:08:41,769 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "POST /api/bot/game/lGU39kXF/move/b1c3?offeringDraw=false HTTP/1.1" 200 11
+2023-11-02 10:08:41,769 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'g1f3 d7d5 b1c3', 'wtime': 302860, 'btime': 300000, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-11-02 10:08:43,676 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'g1f3 d7d5 b1c3 e7e6', 'wtime': 302860, 'btime': 301150, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-11-02 10:08:43,677 __mp_main__ (lichess-bot.py:691) INFO 
+2023-11-02 10:08:43,677 __mp_main__ (lichess-bot.py:692) INFO move: 3
+2023-11-02 10:08:43,678 engine_wrapper (engine_wrapper.py:643) INFO Searching for wtime 300859 btime 301150 for game lGU39kXF
+2023-11-02 10:08:43,788 engine_wrapper (engine_wrapper.py:293) INFO Source: Engine
+2023-11-02 10:08:43,841 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "POST /api/bot/game/lGU39kXF/move/f3e5?offeringDraw=false HTTP/1.1" 200 11
+2023-11-02 10:08:43,842 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'g1f3 d7d5 b1c3 e7e6 f3e5', 'wtime': 305700, 'btime': 301150, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-11-02 10:08:47,575 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'g1f3 d7d5 b1c3 e7e6 f3e5 f7f6', 'wtime': 305700, 'btime': 300470, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-11-02 10:08:47,576 __mp_main__ (lichess-bot.py:691) INFO 
+2023-11-02 10:08:47,576 __mp_main__ (lichess-bot.py:692) INFO move: 4
+2023-11-02 10:08:47,577 engine_wrapper (engine_wrapper.py:643) INFO Searching for wtime 303700 btime 300470 for game lGU39kXF
+2023-11-02 10:08:47,698 engine_wrapper (engine_wrapper.py:293) INFO Source: Engine
+2023-11-02 10:08:47,755 urllib3.connectionpool (connectionpool.py:547) DEBUG https://lichess.org:443 "POST /api/bot/game/lGU39kXF/move/e5f3?offeringDraw=false HTTP/1.1" 200 11
+2023-11-02 10:08:47,756 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'g1f3 d7d5 b1c3 e7e6 f3e5 f7f6 e5f3', 'wtime': 308520, 'btime': 300470, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-11-02 10:08:55,617 __mp_main__ (lichess-bot.py:68) DEBUG Received SIGINT. Terminating client.
+2023-11-02 10:08:55,617 __mp_main__ (lichess-bot.py:68) DEBUG Received SIGINT. Terminating client.
+2023-11-02 10:08:58,194 __main__ (lichess-bot.py:1091) ERROR Quitting lichess-bot due to an error:
+Traceback (most recent call last):
+  File "/Users/vasileignat/Documents/Projects/Labs/fia-lab3/lichess-bot.py", line 1088, in <module>
+    start_lichess_bot()
+  File "/Users/vasileignat/Documents/Projects/Labs/fia-lab3/lichess-bot.py", line 1044, in start_lichess_bot
+    start(li, user_profile, CONFIG, logging_level, args.logfile, auto_log_filename)
+  File "/Users/vasileignat/Documents/Projects/Labs/fia-lab3/lichess-bot.py", line 231, in start
+    lichess_bot_main(li,
+  File "/Users/vasileignat/Documents/Projects/Labs/fia-lab3/lichess-bot.py", line 311, in lichess_bot_main
+    event = next_event(control_queue)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vasileignat/Documents/Projects/Labs/fia-lab3/lichess-bot.py", line 366, in next_event
+    if "type" not in event:
+       ^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'NoneType' is not iterable
